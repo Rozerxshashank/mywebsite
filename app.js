@@ -5,7 +5,6 @@ let ending=document.querySelector(".ending");
 let end=document.querySelector("#end");
 let turnX=true;
  const audio = document.getElementById('myAudio');
- const drawaudio = document.getElementById('myAudio2');
  const winaudio = document.getElementById('myAudio3');
 const win=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
 const rstgame=(s)=>{
@@ -51,16 +50,14 @@ boxx.forEach((box) => {
     end.innerText="It's a Draw";
     ending.classList.remove("lll");
     close();
-    drawaudio.play();
-
-  }
+  };
   
   const wnr=(winner)=>{
     end.innerText=(`Congrats The Winner is "${winner}"`);
     ending.classList.remove("lll");
     close();
     winaudio.play();
-  }
+  };
 const check=()=>{
     for (let pattern of win){
     
